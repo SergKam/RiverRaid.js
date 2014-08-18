@@ -1,12 +1,12 @@
-define(function () {
+define( function () {
     var Actor = function (game) {
         this.game = game;
         this.el = document.createElement("div");
         this.el.className = "enemy";
-        if(game) {
+        if (game) {
             this.game.canvas.appendChild(this.el);
         }
-        this.role = 0;
+        this.role = Actor.NEUTRAL;
         this.left = 100;
         this.top = -100;
         this.width = 150;
@@ -53,16 +53,22 @@ define(function () {
         },
         hit: function (points) {
             this.life -= points;
-           if (this.life <= 0) {
+            if (this.life <= 0) {
                 this.die();
             }
 
         },
-        die: function(){
+        die: function () {
             this.destroy();
         }
 
 
     };
+
+    Actor.NEUTRAL = 0;
+    Actor.FRIEND = 1;
+    Actor.ENEMY = -1;
+
+
     return Actor;
 });

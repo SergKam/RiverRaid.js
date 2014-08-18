@@ -1,8 +1,8 @@
-define(["./Actor", "./Cloud"], function (Actor, Cloud) {
+define(["./Actor", "./Explosion"], function (Actor, Explosion) {
 
     var Enemy = function () {
         Actor.apply(this, arguments);
-        this.role = -1;
+        this.role = Actor.ENEMY;
         this.life = 1;
         this.damage = 10;
     };
@@ -19,7 +19,7 @@ define(["./Actor", "./Cloud"], function (Actor, Cloud) {
     Enemy.prototype.die = function (dt) {
         Actor.prototype.die.apply(this, arguments);
 
-        var cloud = new Cloud(this.game);
+        var cloud = new Explosion(this.game);
         cloud.left = this.left - 200;
         cloud.top = this.top - 100;
         this.game.addActor(cloud);

@@ -2,7 +2,7 @@ define(["./Actor", "./Rocket", "./utils"], function (Actor, Rocket, utils) {
         var Plain = function (game) {
             Actor.apply(this, arguments);
             this.setClass('plain');
-            this.role = 1;
+            this.role = Actor.FRIEND;
             this.left = 400;
             this.top = 400;
             this.width = 200;

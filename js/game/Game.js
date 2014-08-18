@@ -1,4 +1,4 @@
-define(["./Plain", "./Enemy"], function (Plain, Enemy) {
+define(["./Actor","./Plain", "./Enemy","./Background"], function (Actor, Plain, Enemy, Background) {
     var Game = function (canvas) {
         this.canvas = canvas;
         this.updateSize();
@@ -6,6 +6,7 @@ define(["./Plain", "./Enemy"], function (Plain, Enemy) {
         this.actorList = [];
         this.plain = new Plain(this);
         this.addActor(this.plain);
+        this.addActor(new Background(this.canvas));
         for (var i = 0; i < 30; i++) {
             var enemy = new Enemy(this);
             enemy.deltaTop = 300 * Math.random();
@@ -75,8 +76,8 @@ define(["./Plain", "./Enemy"], function (Plain, Enemy) {
                         good.hit(bad.damage);
                         bad.hit(good.damage);
                     }
-                }, -1);
-            }, 1);
+                }, Actor.ENEMY);
+            }, Actor.FRIEND);
 
         },
         addKeys: function () {

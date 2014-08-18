@@ -3,7 +3,7 @@ define(["./Actor"], function (Actor) {
     var Rocket = function (game) {
         Actor.apply(this, arguments);
         this.setClass('rocket');
-        this.role = 1;
+        this.role = Actor.FRIEND;
         this.width = 13;
         this.height = 216;
         this.deltaLeft = 0;
