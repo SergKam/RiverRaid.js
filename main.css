@@ -1,0 +1,110 @@
+.canvas {
+    /*background: forestgreen;*/
+    width: 100px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+.plain {
+    position: absolute;
+    top: 300px;
+    left: 400px;
+    width: 200px;
+    height: 150px;
+    background: url(image/plaine.png);
+    overflow: hidden;
+    opacity: 1;
+}
+
+.plain.bad1 {
+    background: url(image/plaineBad1.png);
+}
+
+.plain.bad2 {
+    background: url(image/plaineBad2.png);
+}
+
+.plain.bad3 {
+    background: url(image/plaineBad3.png);
+}
+
+.plain.bad4 {
+    background: url(image/plaineBad4.png);
+}
+
+.plain.bad5 {
+    background: url(image/plaineBad5.png);
+}
+
+.plain.bad6 {
+    background: url(image/plaineBad6.png);
+}
+
+.plain.bad7 {
+    background: url(image/plaineBad7.png);
+}
+
+.plain.bad8 {
+    background: url(image/plaineBad8.png);
+}
+
+.rocket {
+    position: absolute;
+    top: 300px;
+    left: -400px;
+    width: 13px;
+    height: 216px;
+    background: url(image/rocket.png);
+    overflow: hidden;
+    z-index: -1;
+}
+
+.rocket.a1 {
+    background: url(image/rocket1.png);
+}
+
+.cloud1 {
+    position: absolute;
+    top: 300px;
+    left: -4000px;
+    width: 600px;
+    height: 300px;
+    background: url(image/cloud1.png);
+    overflow: hidden;
+    opacity: .3;
+    z-index: 1000;
+}
+
+.cloud2 {
+    position: absolute;
+    top: 300px;
+    left: -4000px;
+    width: 600px;
+    height: 300px;
+    background: url(image/cloud2.png);
+    overflow: hidden;
+    opacity: .3;
+    z-index: 1000;
+}
+.enemy {
+    position: absolute;
+    top: 300px;
+    left: 400px;
+    width: 150px;
+    height: 100px;
+    background: url(image/enemy.png);
+    overflow: hidden;
+}
+
+.grass {
+    position: absolute;
+    top: 300px;
+    left: 400px;
+    width: 200px;
+    height: 150px;
+    background: url(image/plaine.png);
+    overflow: hidden;
+}
+
