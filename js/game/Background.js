@@ -5,7 +5,7 @@ define(["./Actor"], function (Actor) {
         this.role = Actor.NEUTRAL;
         this.speed = 10;// pixels/sec
         this.position = 0;
-        this.height = 324;
+        this.height = 302;
     };
 
     Background.prototype.tick = function (dt) {

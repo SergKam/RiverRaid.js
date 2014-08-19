@@ -1,5 +1,5 @@
 .canvas {
-    background: url(image/water.jpg);
+    background: url(image/clouds-tile.jpg);
     width: 100px;
     height: 100px;
     position: relative;
@@ -8,50 +8,60 @@
     z-index: 0;
 }
 
-.plain {
+.plaine {
     position: absolute;
     top: 300px;
     left: 400px;
     width: 200px;
-    height: 150px;
-    background: url(image/plaine.png);
+    height: 198px;
+    background-image: url(image/su25_top.png);
+    background-repeat: no-repeat;
     overflow: hidden;
     opacity: 1;
     z-index: 100;
 }
 
-.plain.bad1 {
-    background: url(image/plaineBad1.png);
+.plaine.left {
+    background-image: url(image/su25_left.png);
 }
 
-.plain.bad2 {
-    background: url(image/plaineBad2.png);
+.plaine.right {
+    background-image: url(image/su25_right.png);
 }
 
-.plain.bad3 {
-    background: url(image/plaineBad3.png);
+/*
+.plaine.bad1 {
+    background: url(image/plaineeBad1.png);
 }
 
-.plain.bad4 {
-    background: url(image/plaineBad4.png);
+.plaine.bad2 {
+    background: url(image/plaineeBad2.png);
 }
 
-.plain.bad5 {
-    background: url(image/plaineBad5.png);
+.plaine.bad3 {
+    background: url(image/plaineeBad3.png);
 }
 
-.plain.bad6 {
-    background: url(image/plaineBad6.png);
+.plaine.bad4 {
+    background: url(image/plaineeBad4.png);
 }
 
-.plain.bad7 {
-    background: url(image/plaineBad7.png);
+.plaine.bad5 {
+    background: url(image/plaineeBad5.png);
 }
 
-.plain.bad8 {
-    background: url(image/plaineBad8.png);
+.plaine.bad6 {
+    background: url(image/plaineeBad6.png);
 }
 
+.plaine.bad7 {
+    background: url(image/plaineeBad7.png);
+}
+
+.plaine.bad8 {
+    background: url(image/plaineeBad8.png);
+}
+*/
 .rocket {
     position: absolute;
     top: 300px;

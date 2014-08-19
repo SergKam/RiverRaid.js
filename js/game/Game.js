@@ -1,10 +1,10 @@
-define(["./Actor","./Plain", "./Enemy","./Background"], function (Actor, Plain, Enemy, Background) {
+define(["./Actor","./Plaine", "./Enemy","./Background"], function (Actor, Plaine, Enemy, Background) {
     var Game = function (canvas) {
         this.canvas = canvas;
         this.updateSize();
 
         this.actorList = [];
-        this.plain = new Plain(this);
+        this.plain = new Plaine(this);
         this.addActor(this.plain);
         this.addActor(new Background(this.canvas));
         for (var i = 0; i < 30; i++) {
