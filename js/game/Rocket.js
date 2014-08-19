@@ -1,4 +1,4 @@
-define(["./Actor"], function (Actor) {
+define(["./Actor","./Explosion"], function (Actor, Explosion) {
 
     var Rocket = function (game) {
         Actor.apply(this, arguments);
@@ -22,6 +22,17 @@ define(["./Actor"], function (Actor) {
         if(this.top+this.height< this.game.top){
             this.destroy();
         }
+    };
+
+    Rocket.prototype.die = function () {
+        this.role = Actor.NEUTRAL;
+        Actor.prototype.die.apply(this, arguments);
+
+        var explosion = new Explosion(this.game);
+        explosion.el.style.transform = "scale(0.5)";
+        explosion.left = this.left - 100;
+        explosion.top = this.top - 100;
+        this.game.addActor(explosion);
     };
 
     return Rocket;

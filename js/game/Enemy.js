@@ -5,6 +5,7 @@ define(["./Actor", "./Explosion"], function (Actor, Explosion) {
         this.role = Actor.ENEMY;
         this.life = 1;
         this.damage = 10;
+        this.angle = 0;
     };
 
     Enemy.prototype = new Actor();
@@ -16,13 +17,14 @@ define(["./Actor", "./Explosion"], function (Actor, Explosion) {
             this.destroy();
         }
     };
-    Enemy.prototype.die = function (dt) {
-        Actor.prototype.die.apply(this, arguments);
-
-        var cloud = new Explosion(this.game);
-        cloud.left = this.left - 200;
-        cloud.top = this.top - 100;
-        this.game.addActor(cloud);
+    Enemy.prototype.die = function () {
+        this.role = Actor.NEUTRAL;
+        this.setClass('enemy dying');
+        setTimeout(this.destroy.bind(this), 3000);
+        var explosion = new Explosion(this.game);
+        explosion.left = this.left - 20;
+        explosion.top = this.top - 20;
+        this.game.addActor(explosion);
     };
 
 

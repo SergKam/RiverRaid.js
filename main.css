@@ -77,6 +77,57 @@
     background: url(image/rocket1.png);
 }
 
+.explosion {
+    position: absolute;
+    top: 300px;
+    left: -4000px;
+    width: 200px;
+    height: 200px;
+    background: url(image/explosion.png);
+    background-position: 0 0;
+    overflow: hidden;
+    opacity: .6;
+    z-index: 1000;
+}
+
+.explosion.a1 {
+    background-position: 0 0;
+}
+
+.explosion.a2 {
+    background-position: -200px 0;
+}
+
+.explosion.a3 {
+    background-position: -400px 0;
+}
+
+.explosion.a4 {
+    background-position: 0 -200px;
+}
+
+.explosion.a5 {
+    background-position: -200px -200px;
+}
+
+.explosion.a6 {
+    background-position: -400px -200px;
+}
+
+.explosion.a7 {
+    background-position: 0 -400px;
+}
+
+.explosion.a8 {
+    background-position: -200px -400px;
+}
+
+.explosion.a9 {
+    background-position: -400px -400px;
+}
+
+
+
 .cloud1 {
     position: absolute;
     top: 300px;
@@ -111,3 +162,19 @@
     z-index: 200;
 }
 
+.enemy.dying {
+    animation: rotates 3s infinite;
+}
+
+@-webkit-keyframes rotates {
+    100% {
+        -webkit-transform: rotate(360deg) scale(0.0);
+    }
+}
+
+/* Standard syntax */
+@keyframes rotates {
+    100% {
+        transform: rotate(360deg) scale(0.0);
+    }
+}
