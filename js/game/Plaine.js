@@ -76,6 +76,7 @@ define(["./Actor", "./Rocket", "./utils"], function (Actor, Rocket, utils) {
                 },
                 hit: function (points) {
                     Actor.prototype.hit.apply(this, arguments);
+                    this.el.style.zIndex = 0;
                     this.setClass('plain bad' + (9 - Math.round((this.life / 100) * 9)));
                 },
 
