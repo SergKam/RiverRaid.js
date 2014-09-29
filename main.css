@@ -12,69 +12,17 @@
     position: absolute;
     top: 300px;
     left: 400px;
-    width: 200px;
-    height: 198px;
-    background-image: url(image/su25_top.png);
-    background-repeat: no-repeat;
     overflow: hidden;
     opacity: 1;
     z-index: 100;
 }
 
-.plaine.left {
-    background-image: url(image/su25_left.png);
-}
-
-.plaine.right {
-    background-image: url(image/su25_right.png);
-}
-
-/*
-.plaine.bad1 {
-    background: url(image/plaineeBad1.png);
-}
-
-.plaine.bad2 {
-    background: url(image/plaineeBad2.png);
-}
-
-.plaine.bad3 {
-    background: url(image/plaineeBad3.png);
-}
-
-.plaine.bad4 {
-    background: url(image/plaineeBad4.png);
-}
-
-.plaine.bad5 {
-    background: url(image/plaineeBad5.png);
-}
-
-.plaine.bad6 {
-    background: url(image/plaineeBad6.png);
-}
-
-.plaine.bad7 {
-    background: url(image/plaineeBad7.png);
-}
-
-.plaine.bad8 {
-    background: url(image/plaineeBad8.png);
-}
-*/
 .rocket {
     position: absolute;
     top: 300px;
     left: -400px;
-    width: 13px;
-    height: 216px;
-    background: url(image/rocket.png);
     overflow: hidden;
     z-index: 10;
-}
-
-.rocket.a1 {
-    background: url(image/rocket1.png);
 }
 
 .explosion {
@@ -83,81 +31,51 @@
     left: -4000px;
     width: 200px;
     height: 200px;
-    background: url(image/explosion.png);
-    background-position: 0 0;
     overflow: hidden;
     opacity: .6;
     z-index: 1000;
 }
 
 .explosion.a1 {
-    background-position: 0 0;
-}
-
-.explosion.a2 {
-    background-position: -200px 0;
-}
-
-.explosion.a3 {
-    background-position: -400px 0;
-}
-
-.explosion.a4 {
-    background-position: 0 -200px;
-}
-
-.explosion.a5 {
-    background-position: -200px -200px;
-}
-
-.explosion.a6 {
-    background-position: -400px -200px;
-}
-
-.explosion.a7 {
     background-position: 0 -400px;
 }
 
-.explosion.a8 {
+.explosion.a2 {
     background-position: -200px -400px;
 }
 
-.explosion.a9 {
+.explosion.a3 {
     background-position: -400px -400px;
 }
 
-
-
-.cloud1 {
-    position: absolute;
-    top: 300px;
-    left: -4000px;
-    width: 600px;
-    height: 300px;
-    background: url(image/cloud1.png);
-    overflow: hidden;
-    opacity: .3;
-    z-index: 1000;
+.explosion.a4 {
+    background-position: 0 -600px;
 }
 
-.cloud2 {
-    position: absolute;
-    top: 300px;
-    left: -4000px;
-    width: 600px;
-    height: 300px;
-    background: url(image/cloud2.png);
-    overflow: hidden;
-    opacity: .3;
-    z-index: 1000;
+.explosion.a5 {
+    background-position: -200px -600px;
 }
+
+.explosion.a6 {
+    background-position: -400px -600px;
+}
+
+.explosion.a7 {
+    background-position: 0 -800px;
+}
+
+.explosion.a8 {
+    background-position: -200px -800px;
+}
+
+.explosion.a9 {
+    background-position: -400px -800px;
+}
+
 .enemy {
     position: absolute;
     top: 300px;
     left: 400px;
-    width: 150px;
-    height: 100px;
-    background: url(image/enemy.png);
     overflow: hidden;
     z-index: 200;
 }
@@ -178,3 +96,59 @@
         transform: rotate(360deg) scale(0.0);
     }
 }
+     /* sprite */
+.enemy, .rocket, .plaine, .explosion, .plaineBad .plaineBad3 {
+    background-image: url(image/sprite.png);
+    background-repeat : no-repeat;
+}
+
+.enemy {
+    background-position: -5px 0;
+    width: 150px;
+    height: 107px;
+}
+
+.rocket {
+    background-position: -240px 0;
+    width: 13px;
+    height: 216px;
+}
+
+.rocket.a1 {
+    background-position: -214px 0;
+    width: 13px;
+    height: 216px;
+}
+
+.plaine {
+    background-position: 0 -117px;
+    width: 200px;
+    height: 198px;
+}
+
+.plaine.left{
+    background-position: -269px 0;
+    width: 188px;
+    height: 200px;
+}
+
+.plaine.right {
+    background-position: -458px 0;
+    width: 182px;
+    height: 200px;
+}
+
+
+
+.plaineBad {
+    background-position: -440px -210px;
+    width: 200px;
+    height: 156px;
+}
+
+.plaineBad3 {
+    background-position: -221px -229px;
+    width: 200px;
+    height: 156px;
+}
+
