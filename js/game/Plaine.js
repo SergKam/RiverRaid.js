@@ -11,6 +11,7 @@ define(["./Actor", "./Rocket", "./utils"], function (Actor, Rocket, utils) {
             this.deltaTop = 0;
             this.life = 100;
             this.damage = 100;
+            this.fired = 0;
         };
 
 
@@ -36,6 +37,13 @@ define(["./Actor", "./Rocket", "./utils"], function (Actor, Rocket, utils) {
                     this.deltaTop = 0;
                 },
                 fire: function () {
+                    var time = this.game.lastTime;
+
+                    if (time - this.fired < 500) {
+                        return;
+                    }
+
+                    this.fired = time;
                     var weapon = new Rocket(this.game);
                     this.fireLeft = !this.fireLeft;
                     weapon.left = this.left + 65 + 60 * this.fireLeft;
@@ -43,9 +51,11 @@ define(["./Actor", "./Rocket", "./utils"], function (Actor, Rocket, utils) {
 
                     this.game.addActor(weapon);
                 },
+
                 stopFire: function () {
 
                 },
+
                 tick: function (dt) {
 
 
@@ -53,7 +63,7 @@ define(["./Actor", "./Rocket", "./utils"], function (Actor, Rocket, utils) {
                     var newTop = this.top + this.deltaTop * (dt / 1000);
                     if (newLeft < 0 ||
                         newLeft + this.width > this.game.width
-                        ) {
+                    ) {
                         this.stopLeft();
                     }
 
