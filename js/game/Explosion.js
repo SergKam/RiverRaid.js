@@ -13,10 +13,10 @@ define(["./Actor"], function (Actor) {
     };
 
     Explosion.prototype = new Actor();
-    Explosion.prototype.tick = function(dt){
-      Actor.prototype.tick.apply(this, arguments);
-      this.hit(0.1*dt);
-      this.setClass('explosion a' + (10 - Math.round((this.life / 100) * 9)));
+    Explosion.prototype.tick = function (dt) {
+        Actor.prototype.tick.apply(this, arguments);
+        this.hit(0.1 * dt);
+        this.setClass('explosion a' + (9 - Math.round((this.life / 100) * 9)));
     };
     return Explosion;
 });

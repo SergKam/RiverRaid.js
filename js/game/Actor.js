@@ -20,7 +20,9 @@ define( function () {
     Actor.prototype = {
 
         destroy: function () {
-            this.el.parentNode.removeChild(this.el);
+            if(this.el.parentNode) {
+                this.el.parentNode.removeChild(this.el);
+            }
             this.game.removeActor(this);
         },
         setClass: function (cls) {
@@ -31,10 +33,13 @@ define( function () {
 
             this.left += this.deltaLeft * (dt / 1000);
             this.top += this.deltaTop * (dt / 1000);
-            this.el.style.left = Math.round(this.left) + 'px';
-            this.el.style.top = Math.round(this.top) + 'px';
-
+            this.move(this.left, this.top);
         },
+        move: function(left, top) {
+            this.el.style.left = left + 'px';
+            this.el.style.top =  top + 'px';
+        },
+
         isOverlapped: function (target) {
             if (this.top > target.top + target.height) {
                 return false;
